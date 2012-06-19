@@ -1,0 +1,6 @@
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: com.epam.training.cq.HelloWorldActivator
+Bundle-Name: EPAM HelloWorld 
+Bundle-Version: 1.0.0
+Bundle-Activator: com.epam.training.cq.HelloWorldActivator
+Import-Package: org.osgi.framework
