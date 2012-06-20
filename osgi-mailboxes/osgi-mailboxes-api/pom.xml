@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.epam.training.cq</groupId>
+		<artifactId>osgi-mailboxes</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<artifactId>osgi-mailboxes-api</artifactId>
+	<packaging>bundle</packaging>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>buildnumber-maven-plugin</artifactId>
+				<version>1.0-beta-3</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<doCheck>true</doCheck>
+					<doUpdate>false</doUpdate>
+					<format>{0,date,yyyyMMddHHmmss}</format>
+					<items>
+						<item>timestamp</item>
+					</items>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.4</version>
+				
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>org.osgi.mailboxes.api</Bundle-SymbolicName>
+						<Bundle-Version>${project.version}.${buildNumber}</Bundle-Version>
+						
+						<Export-Package>org.osgi.mailboxes.api.*</Export-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
