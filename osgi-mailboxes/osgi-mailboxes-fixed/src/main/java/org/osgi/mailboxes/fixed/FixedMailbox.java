@@ -1,17 +1,19 @@
 package org.osgi.mailboxes.fixed;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.osgi.mailboxes.api.Mailbox;
 import org.osgi.mailboxes.api.Message;
 
 public class FixedMailbox implements Mailbox {
-	private final List<Message> messages = new ArrayList<Message>();
+	private final List<Message> messages;
 	
 	public FixedMailbox() {
-		messages.add(new StringMessage(0, "Hi there!", "Welcome to OSGi world!"));
-		messages.add(new StringMessage(1, "Modulatiry", "Modularity is esential for developing flexible and maintainable  software!"));
+		messages = Arrays.<Message>asList(
+				new StringMessage(0, "Hi there!", "Welcome to OSGi world!"), 
+				new StringMessage(1, "Modulatiry", "Modularity is esential for developing flexible and maintainable  software!")
+			);
 	}
 	
 	@Override
