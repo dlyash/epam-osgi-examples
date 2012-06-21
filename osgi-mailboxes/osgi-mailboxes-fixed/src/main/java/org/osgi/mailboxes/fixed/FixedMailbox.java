@@ -22,7 +22,7 @@ public class FixedMailbox implements Mailbox {
 		for(int i = 0; i < messages.size(); ++i) {
 			ids[i] = i;
 		}
-		return null;
+		return ids;
 	}
 
 	@Override
