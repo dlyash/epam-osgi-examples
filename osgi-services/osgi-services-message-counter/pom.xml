@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>com.epam.training.cq</groupId>
+		<artifactId>osgi-services</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
+	<artifactId>osgi-services-message-counter</artifactId>
+	<packaging>bundle</packaging>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.4</version>
+				
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>org.osgi.services.mailboxes.counter</Bundle-SymbolicName>
+						<Bundle-Version>${project.version}</Bundle-Version>
+						
+						<Bundle-Activator>org.osgi.services.mailboxes.counter.MessageCountAvtivator</Bundle-Activator>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.epam.training.cq</groupId>
+			<artifactId>osgi-mailboxes-api</artifactId>
+			<version>1.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>4.2.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
