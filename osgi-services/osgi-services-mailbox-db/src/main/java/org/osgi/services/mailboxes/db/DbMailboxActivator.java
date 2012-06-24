@@ -32,13 +32,13 @@ public class DbMailboxActivator implements BundleActivator {
 		}
 
 		@Override
-		public void modifiedService(ServiceReference reference, Object service) {
+		public void modifiedService(ServiceReference reference, Object serviceRegistration) {
 			
 		}
 
 		@Override
-		public void removedService(ServiceReference reference, Object service) {
-			ServiceRegistration registration = (ServiceRegistration) service;
+		public void removedService(ServiceReference reference, Object serviceRegistration) {
+			ServiceRegistration registration = (ServiceRegistration) serviceRegistration;
 			registration.unregister();
 			context.ungetService(reference);
 		}
