@@ -25,6 +25,8 @@ public class DbMailboxActivator implements BundleActivator {
 		public Object addingService(ServiceReference reference) {
 			DataSource ds = (DataSource) context.getService(reference);
 			
+			System.out.println("Data Source found. Registring DbMailbox.");
+			
 			ServiceRegistration registration =  context.registerService(Mailbox.class.getName(), 
 					new DbMailbox(ds), null);
 			
@@ -38,6 +40,8 @@ public class DbMailboxActivator implements BundleActivator {
 
 		@Override
 		public void removedService(ServiceReference reference, Object serviceRegistration) {
+			System.out.println("Data Source disappered. Unregistring DbMailbox.");
+			
 			ServiceRegistration registration = (ServiceRegistration) serviceRegistration;
 			registration.unregister();
 			context.ungetService(reference);
