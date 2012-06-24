@@ -20,5 +20,6 @@
 		<module>osgi-services-message-counter</module>
 		<module>osgi-services-message-tracker</module>
 		<module>osgi-services-mailbox-db</module>
+		<module>osgi-services-mailbox-pop3</module>
 	</modules>
 </project>

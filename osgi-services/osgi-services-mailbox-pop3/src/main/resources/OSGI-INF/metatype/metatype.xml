@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+	<OCD id="org.osgi.services.mailboxes.pop3.PopMailboxRegistrator" description="POP3 Mailbox">
+		<AD id="host" type="String" name="Host" description="POP3 server host"/>
+		<AD id="port" type="Integer" default="110" name="Port" description="POP3 server port. Defaults to 110."/>
+		<AD id="user" type="String" name="User" description="User to login to POP server. Anonymous is userd by default."/>
+		<AD id="password" type="String" name="Password" description="User password."/>
+	</OCD>
+	
+	<Designate pid="org.osgi.services.mailboxes.pop3.PopMailboxRegistrator">
+		<Object ocdref="org.osgi.services.mailboxes.pop3.PopMailboxRegistrator"/>
+	</Designate>
+</metatype:MetaData>
