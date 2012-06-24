@@ -12,6 +12,7 @@
 	</parent>
 	
 	<artifactId>osgi-services-mailbox-db</artifactId>
+	<packaging>bundle</packaging>
 	
 	<build>
 		<plugins>
