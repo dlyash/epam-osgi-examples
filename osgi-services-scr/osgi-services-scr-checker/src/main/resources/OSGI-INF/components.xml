@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+	<scr:component enabled="true" immediate="true">
+		<implementation class="org.osgi.services.scr.checker.MailboxChecker"/>
+		
+		<property name="service.pid" value="org.osgi.services.scr.checker.MailboxChecker"/>
+		
+		<reference interface="org.osgi.mailboxes.api.Mailbox" cardinality="0..n" policy="dynamic" bind="addMailbox" unbind="removeMailbox" />
+	</scr:component>
+</components>
