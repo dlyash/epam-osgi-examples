@@ -40,7 +40,7 @@ public class MailboxChecker {
 	
 	protected void activate(Map<String, Object> configuration) {
 		if (configuration.containsKey(PERIOD_PROPERTY)) {
-			period = (Long) configuration.get(PERIOD_PROPERTY);
+			period = Long.valueOf((String) configuration.get(PERIOD_PROPERTY));
 		} else {
 			period = DEFAULT_SCAN_PERIOD;
 		}
