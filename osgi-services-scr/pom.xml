@@ -16,6 +16,6 @@
 	</properties>
 	
 	<modules>
-		<module>osgi-services-scr-scanner</module>
+		<module>osgi-services-scr-checker</module>
 	</modules>
 </project>

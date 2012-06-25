@@ -11,7 +11,7 @@
 		<version>1.0.0</version>
 	</parent>
 	
-	<artifactId>osgi-services-scr-scanner</artifactId>
+	<artifactId>osgi-services-scr-checker</artifactId>
 	<packaging>bundle</packaging>
 	
 	<build>
@@ -24,10 +24,10 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>org.osgi.services.scr.scanner</Bundle-SymbolicName>
+						<Bundle-SymbolicName>org.osgi.services.scr.checker</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
 						
-						<Export-Package>org.osgi.services.scr.scanner.*;</Export-Package>
+						<Export-Package>org.osgi.services.scr.checker.*;</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -39,13 +39,6 @@
 			<groupId>com.epam.training.cq</groupId>
 			<artifactId>osgi-mailboxes-api</artifactId>
 			<version>1.0.0</version>
-			<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>4.2.0</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

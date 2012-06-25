@@ -1,4 +1,4 @@
-package org.osgi.services.scr.scanner;
+package org.osgi.services.scr.checker;
 
 import java.util.List;
 import java.util.Map;
