@@ -6,7 +6,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.osgi.mailboxes.api.Mailbox;
 
-public class MailboxScanner {
+public class MailboxChecker {
 	private static final String PERIOD_PROPERTY = "period";
 	private static final long DEFAULT_SCAN_PERIOD = 1000;
 	
