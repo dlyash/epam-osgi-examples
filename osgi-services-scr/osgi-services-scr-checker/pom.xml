@@ -28,6 +28,7 @@
 						<Bundle-Version>${project.version}</Bundle-Version>
 						
 						<Export-Package>org.osgi.services.scr.checker.*;</Export-Package>
+						<Service-Component>OSGI-INF/components.xml</Service-Component>
 					</instructions>
 				</configuration>
 			</plugin>

@@ -32,7 +32,8 @@ class PopMailboxRegistrator implements ManagedService {
 		try {
 			if (properties != null) {
 				String host = (String) properties.get(HOST_PROPERTY);
-				Integer port = (Integer) properties.get(PORT_PROPERTY);
+				String portString = (String) properties.get(PORT_PROPERTY);
+				int port = portString != null ? Integer.valueOf(portString) : DEFAULT_PORT;
 				String user = (String) properties.get(USER_PROPERTY);
 				String password = (String) properties.get(PASSWORD_PROPERTY);
 				
@@ -44,7 +45,6 @@ class PopMailboxRegistrator implements ManagedService {
 					throw new ConfigurationException(PASSWORD_PROPERTY, "Must be specified for non-anonymous user");
 				}
 				
-				port = (port == null) ? DEFAULT_PORT : port;
 				if (user == null) {
 					user = "anonymous";
 					password = "anonymous";
