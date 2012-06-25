@@ -17,5 +17,6 @@
 	
 	<modules>
 		<module>osgi-services-scr-checker</module>
+		<module>osgi-services-scr-checker-annotations</module>
 	</modules>
 </project>
